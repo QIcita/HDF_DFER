@@ -1,3 +1,6 @@
+import torch
+import torch.nn.functional as F
+
 def DSM(self, features, target, temperature: float = 0.07, beta: float = 0.1, eta: float = 0.2):
 
     features = F.normalize(features, dim=1)
