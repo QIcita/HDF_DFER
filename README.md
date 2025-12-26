@@ -6,4 +6,4 @@ The extended version of the paper is currently under submission, the code will b
 
 
 ## Acknowledgments
-The project is designed on [DFEW](https://github.com/jiangxingxun/DFEW), [FERV39k](https://github.com/wangyanckxx/FERV39k),  [SAM](https://github.com/davda54/sam) and [M3DFEL](https://github.com/Tencent/TFace/blob/master/attribute/M3DFEL/README.md), thanks to these works!
+The project is designed on [DFEW](https://github.com/jiangxingxun/DFEW), [FERV39k](https://github.com/wangyanckxx/FERV39k),  [SAM](https://github.com/davda54/sam),  [X3D](https://arxiv.org/abs/2004.04730) and [M3DFEL](https://github.com/Tencent/TFace/blob/master/attribute/M3DFEL/README.md), thanks to these works!
