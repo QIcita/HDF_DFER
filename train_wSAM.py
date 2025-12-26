@@ -324,3 +324,33 @@ class Solver(object):
             msg += "\t" + emotion
         msg += "\n\n"
         return msg
+
+
+
+    def tsne_visualization(self, features, targets, epoch):
+        tsne = TSNE(n_components=2, init='pca', random_state=501)
+        features_tsne = tsne.fit_transform(features)
+
+        x_min, x_max = features_tsne.min(0), features_tsne.max(0)
+        features_norm = (features_tsne - x_min) / (x_max - x_min)  
+
+        plt.figure(figsize=(8, 8))
+
+        # 定义颜色映射
+        colors = list(mcolors.TABLEAU_COLORS.keys())
+        emotions = ["Neutral", "Happiness", "Sadness", "Anger", "Surprise", "Disgust", "Fear"]
+        color_map = {i: colors[i] for i in range(len(emotions))}
+
+        for i in range(features_norm.shape[0]):
+            plt.scatter(features_norm[i, 0], features_norm[i, 1], color=color_map[targets[i]], label=emotions[targets[i]], s=9)
+        handles, labels = plt.gca().get_legend_handles_labels()
+        by_label = dict(zip(labels, handles))
+        plt.legend(by_label.values(), by_label.keys(), loc='best')
+
+        plt.xticks(np.linspace(0, 1, num=6))
+        plt.yticks(np.linspace(0, 1, num=6))
+
+        plt.savefig(os.path.join(self.args.output_path, f'tsne_epoch_{epoch}.png'))
+        plt.close()
+
+
