@@ -1,4 +1,4 @@
-# Learning from Heterogeneity: Generalizing Dynamic Facial Expression Recognition via Distributionally Robust Optimization 
+# [ACM MM'25]Learning from Heterogeneity: Generalizing Dynamic Facial Expression Recognition via Distributionally Robust Optimization 
 
 The core code of the conference version has been made open source. The extended version of this paper is currently in the submission stage. Once the paper is officially published, all the codes will be freely accessible.
 
